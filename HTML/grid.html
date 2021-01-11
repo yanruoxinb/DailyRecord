@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="grid test"/>
+    <style>
+      .grid{
+        display: grid;
+        grid-template-columns:250px repeat( 4 , 4fr);
+        grid-column-gap: 10px;
+        height: 100px;
+      }
+      .grid_1{
+        height: 100%;
+        background-color: aqua;
+      }
+      .grid_1{
+        height: 100%;
+        background-color:bisque;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="grid_1">11111</div>
+      <div class="grid_2">22222</div>
+      <div class="grid_3">33333</div>
+      <div class="grid_4">44444</div>
+    </div>
+  </body>
+</html>
