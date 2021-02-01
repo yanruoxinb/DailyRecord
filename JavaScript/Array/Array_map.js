@@ -11,7 +11,7 @@ console.log(test);
 
 let map = Array.prototype.map
 let a = map.call('Hello World', function (x) {
-  return x.chaFrCodeAt(0)
+  return x.chaFromCodeAt(0)
 })
 // [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]
 
