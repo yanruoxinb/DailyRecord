@@ -164,6 +164,7 @@ deploy:
     - DEPLOYMENT_NAME=$CI_PROJECT_NAME-deployment
     - SVC_NAME=`echo "$CI_PROJECT_NAME-svc" | sed 's/\./-/g'`
   script:
+  
     - IMAGE="$CI_DOCKER_MLAMP_REGISTRY/cem/$CI_PROJECT_NAME:$CI_COMMIT_TAG"
     # 检查集群中是否存在deployment, 不存在则创建
     - kubectl --server="${K8S_API_URL}" --token="$CI_K8S_PROD_TOKEN" get deployment $DEPLOYMENT_NAME -n cem --insecure-skip-tls-verify 2>/dev/null ||  kubectl --server="${K8S_API_URL}" --token=$CI_K8S_PROD_TOKEN --insecure-skip-tls-verify apply -f ./deploy/k8s/prod/deployment.yml
